@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Covid-19 vaccination statistics</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="js.js">    </script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+<div class='top'>	
+	<h1 >Στατιστικά εμβολιασμού για τον COVID-19</h1>
+</div>
+<div class='mid'>
+  <div class="column">
+  	<h3>Συνολικά μέχρι σήμερα,<br/> έχουν εμβολιαστεί <span id="x">  X </span><br/>   άνθρωποι.</h3> 
+  </div>
+  <div class="column">
+  	<h3>Έχουν γίνει, <br/><span id="y">  Y </span> εμβολιασμοί <br/>της 1ης δόσης.</h3>	
+  </div>
+  <div class="column">
+    <h3> Έχουν γίνει, <br/><span id="z">  Z </span> εμβολιασμοί <br/>της 2ης δόσης.</h3>
+  </div>
+</div>
+<div class='charts' >
+    <div  id="UI">
+        <div id="Areas_div"><select id="Areas" onchange="area_updated()" ></select></div>
+        <div id="Date_from" >Από:</div>
+        <div id="Date_to" >Έως:</div>
+        <div id="Change_dates"  class="button" onclick="date_updated()">Αλλαγή ημ/νιας</div>
+    </div>
+    <div id="left_line" ></div>
+    <div id="right_line"></div> 
+    <div id="left_pie"></div>
+    <div id="right_pie"></div>
+</div>
+<div class='footer'>
+	<small>Τα δεδομένα αντλήθηκαν απο το site:<a href="https://data.gov.gr/">https://data.gov.gr</a></small>
+	<br/>
+	<small>Για τους γράφους χρησιμοποιήθηκε το api:<a href="https://developers.google.com/chart">https://developers.google.com/chart</a></small>
+	<br/>
+</div>
+
+<script>
+	make_date_from("Date_from");
+	make_date_to("Date_to");
+	compxyz();
+	let today = current_date();
+	let promise = getAllData([today]);
+	promise.then(resp => {
+		store_missing_datasets(resp);
+		date_updated();
+	});
+</script>
+</body>
+</html>

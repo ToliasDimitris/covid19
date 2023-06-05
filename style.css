@@ -1,0 +1,131 @@
+
+html,body{
+	background-color:white;
+	width:100%;
+	height:100%;
+	margin:auto;
+}
+
+.top{
+    height:15%;
+    width:100%;
+	background-color:white;
+	text-align:center;
+	background: url("https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-biological-virus-medical-safety-banner-image_261102.jpg");
+	background-repeat:repeat;
+	background-size: 600px 100px;
+}
+
+
+.mid{
+  display: flex;
+  flex-direction: row;  
+  height:25%;
+  width:100%;
+  
+}
+
+.column{
+	margin:auto;
+	width:33%;
+	height:100%;	
+	background-color:Snow;
+    text-align:center;  	
+}
+
+.charts{
+    background-color:lightskyblue;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer{
+    height:10%;
+    width:100%;    
+    background-color: bisque;   
+    font: 1.5em sans-serif;
+    text-align:left;
+    
+}
+
+#UI{	
+	margin-left: 20px;
+	margin-bottom:20px;
+	margin-top:10px;
+	display:flex; 
+	flex-direction:row;
+}
+
+
+#Date_from,#Date_to,#Areas_div{    
+	margin-left:20px;	
+	width:auto;
+	height:auto;	
+}
+
+#Change_dates{
+	margin-left:20px;	
+	width:100px;
+	height:40px;
+}
+
+#Areas{
+	width:200px;
+}
+
+.button{
+   background-color: white; 
+   color: black;
+   text-align:center;
+}
+.button:hover{
+	background-color:paleturquoise;
+}
+
+
+#left_line{
+   	height:400px;
+    margin:40px;
+}
+
+#right_line{
+  	height:400px;
+    margin:40px;
+}
+
+#left_pie{
+	height:400px;
+    margin:40px;
+}
+
+#right_pie{
+	height:400px;
+    margin:40px;
+}
+
+span{
+	color:blue;
+	font-weight:bold;
+}
+
+h1{
+	margin: 0;
+}
+
+h3{	
+	font-style:italic;
+	font-weight:normal;
+	font-size:32px;
+}
+small{
+	margin-left:15px;
+	
+}
+#logo{
+	text-align:right;
+	font-style:italic;
+	margin-right:15px;
+	margin-bottom:5px;
+}
